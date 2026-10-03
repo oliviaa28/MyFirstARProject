@@ -1,35 +1,30 @@
 using UnityEngine;
+using Vuforia;
 
 public class CactusProximity : MonoBehaviour
 {
-    public Transform targetImage1, targetImage2;
+    public ObserverBehaviour targetImage1, targetImage2;
     public Animator cactusAnimator1, cactusAnimator2;
     public float attackDistance= 0.20f;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         float distance;
+        bool isAttacking = false;
 
-        distance = Vector3.Distance( targetImage1.position, targetImage2.position);
-        Debug.Log("Distanta: " + distance);
-
-        if (distance <= attackDistance)
+        if (targetImage1.TargetStatus.Status == Status.TRACKED && targetImage2.TargetStatus.Status == Status.TRACKED)
         {
-            cactusAnimator1.SetBool("isAttacking", true);
-            cactusAnimator2.SetBool("isAttacking", true);
-        }
-        else {
-            cactusAnimator1.SetBool("isAttacking", false);
-            cactusAnimator2.SetBool("isAttacking", false);
-        }
+            distance = Vector3.Distance(targetImage1.transform.position,
+                                         targetImage2.transform.position);
 
 
+            if (distance <= attackDistance)
+                isAttacking = true;
+
+        }
+
+        cactusAnimator1.SetBool("isAttacking", isAttacking);
+        cactusAnimator2.SetBool("isAttacking", isAttacking);
     }
 }
