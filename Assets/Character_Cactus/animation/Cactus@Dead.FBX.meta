@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: cc21b08496939574f8aca4d10dd17bcd
+AssetOrigin:
+  serializedVersion: 1
+  productId: 32933
+  packageName: Character Cactus
+  packageVersion: 1
+  assetPath: Assets/Character_Cactus/animation/Cactus@Dead.FBX
+  uploadId: 55793
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable:
@@ -188,7 +195,7 @@ ModelImporter:
     second: eye_mesh01
   - first:
       74: 7400000
-    second: Take 001
+    second: Dead
   - first:
       95: 9500000
     second: //RootNode
@@ -222,7 +229,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dead
+      takeName: Take 001
+      internalID: 7400000
+      firstFrame: 1
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000u
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -306,10 +342,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 32933
-  packageName: Character Cactus
-  packageVersion: 1
-  assetPath: Assets/Character_Cactus/animation/Cactus@Dead.FBX
-  uploadId: 55793

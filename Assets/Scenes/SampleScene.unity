@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
   StatusFilter: 1
-  UsePoseSmoothing: 0
+  UsePoseSmoothing: 1
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -543,7 +543,9 @@ MonoBehaviour:
   targetImage2: {fileID: 2066159980}
   cactusAnimator1: {fileID: 1109563763}
   cactusAnimator2: {fileID: 903035780}
-  attackDistance: 0.8
+  attackDistance: 0.04
+  movingSensor: 0.005
+  attacker: 0
 --- !u!4 &967992362
 Transform:
   m_ObjectHideFlags: 0
@@ -732,7 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
   StatusFilter: 1
-  UsePoseSmoothing: 0
+  UsePoseSmoothing: 1
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
