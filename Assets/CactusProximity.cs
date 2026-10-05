@@ -10,8 +10,6 @@ public class CactusProximity : MonoBehaviour
     public float movingSensor = 0.005f;
     private Vector3 previousPosition1, previousPosition2;
 
-
-    // Update is called once per frame
     void Update()
     {
         float distance, movement1, movement2;
@@ -23,7 +21,6 @@ public class CactusProximity : MonoBehaviour
         movement1 = Vector3.Distance(targetImage1.transform.position, previousPosition1);
         movement2 = Vector3.Distance(targetImage2.transform.position, previousPosition2);
 
-
         if( movement1> movingSensor)
             isMoving1 = true;
 
@@ -33,9 +30,6 @@ public class CactusProximity : MonoBehaviour
         cactusAnimator1.SetBool("isMoving", isMoving1);
         cactusAnimator2.SetBool("isMoving", isMoving2);
 
-        Debug.Log("M1: " + movement1 + "  M2: " + movement2);
-
-
         if (targetImage1.TargetStatus.Status == Status.TRACKED && targetImage2.TargetStatus.Status == Status.TRACKED)
         {
             distance = Vector3.Distance(targetImage1.transform.position,
@@ -43,9 +37,7 @@ public class CactusProximity : MonoBehaviour
 
             if (distance <= attackDistance)
                 isAttacking = true;
-
         }
-
 
         previousPosition1 = targetImage1.transform.position;
         previousPosition2 = targetImage2.transform.position;
